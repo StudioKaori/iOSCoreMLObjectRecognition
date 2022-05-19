@@ -79,6 +79,16 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer),
             let model = mlModel // Unwrap the mlModel
         else { return }
+        
+        // Create image process request, pass model and result
+        let request = VNCoreMLRequest(model: model) { //An image analysis request that uses a Core ML model to process images.
+
+            (request: VNRequest, error: Error?) in
+            
+            // Get results as VNClassificationObservation array
+            guard let results = request.results as? [VNClassificationObservation] else { return }
+            
+        }
     }
 }
 
