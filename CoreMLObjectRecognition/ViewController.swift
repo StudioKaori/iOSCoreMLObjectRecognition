@@ -71,6 +71,14 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             recognitionInterval += 1
             return
         }
+        recognitionInterval = 0
+        
+        
+        // Convert CMSampleBuffer(an object holding media data) to CMSampleBufferGetImageBuffer
+        guard
+            let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer),
+            let model = mlModel // Unwrap the mlModel
+        else { return }
     }
 }
 
