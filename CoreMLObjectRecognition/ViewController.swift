@@ -6,9 +6,19 @@
 //
 
 import UIKit
+import AVFoundation // video input output framework
+import Vision // Vision import
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    
+    // AVCaptureVideoDataOutputSampleBufferDelegate // when you want to handle the video input every second, you will add the delegate
+    
+    var recognitionInterval = 8 //Interval for object recognition
+    
+    var mlModel: VNCoreMLModel? // CoreML model
+    
+    @IBOutlet var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
