@@ -13,7 +13,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     // AVCaptureVideoDataOutputSampleBufferDelegate // when you want to handle the video input every second, you will add the delegate
     
-    var recognitionInterval = 8 //Interval for object recognition
+    var recognitionInterval = 0 //Interval for object recognition
     
     var mlModel: VNCoreMLModel? // CoreML model
     
@@ -65,7 +65,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     // caputureOutput will be called for each frame was written
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        <#code#>
+        
+        // Recognise the object every 20 frames
+        if recognitionInterval < 20 {
+            recognitionInterval += 1
+            return
+        }
     }
 }
 
