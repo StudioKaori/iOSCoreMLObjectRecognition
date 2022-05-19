@@ -45,6 +45,15 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         if session.canAddOutput(output) {
             session.addOutput(output)
         }
+        
+        // Preview layer setting
+        let previewLayer = AVCaptureVideoPreviewLayer(session: session)
+        previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill // Resize setting, set aspect fill
+        previewLayer.frame = view.bounds // the same size as view
+        view.layer.insertSublayer(previewLayer, at: 0)
+        
+        // Start
+        session.startRunning()
     }
 }
 
