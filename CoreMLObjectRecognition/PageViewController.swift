@@ -13,7 +13,7 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("page view controller!!!!")
+        
         setupPageViewController()
 
     }
