@@ -16,7 +16,6 @@
 		43F0B9DB28366290009B6F09 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 43F0B9DA28366290009B6F09 /* MobileNetV2.mlmodel */; };
 		43F0B9DD28368C79009B6F09 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F0B9DC28368C79009B6F09 /* PageViewController.swift */; };
 		43F0B9DF283694B3009B6F09 /* YoloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F0B9DE283694B3009B6F09 /* YoloViewController.swift */; };
-		43F0B9E1283697C0009B6F09 /* YOLOv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 43F0B9E0283697C0009B6F09 /* YOLOv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		43F0B9DA28366290009B6F09 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		43F0B9DC28368C79009B6F09 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		43F0B9DE283694B3009B6F09 /* YoloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoloViewController.swift; sourceTree = "<group>"; };
-		43F0B9E0283697C0009B6F09 /* YOLOv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				43F0B9DA28366290009B6F09 /* MobileNetV2.mlmodel */,
-				43F0B9E0283697C0009B6F09 /* YOLOv3.mlmodel */,
 			);
 			path = coreMLModels;
 			sourceTree = "<group>";
@@ -168,7 +165,6 @@
 			files = (
 				43F0B9CB28365D97009B6F09 /* ViewController.swift in Sources */,
 				43F0B9DF283694B3009B6F09 /* YoloViewController.swift in Sources */,
-				43F0B9E1283697C0009B6F09 /* YOLOv3.mlmodel in Sources */,
 				43F0B9DD28368C79009B6F09 /* PageViewController.swift in Sources */,
 				43F0B9C728365D97009B6F09 /* AppDelegate.swift in Sources */,
 				43F0B9DB28366290009B6F09 /* MobileNetV2.mlmodel in Sources */,
