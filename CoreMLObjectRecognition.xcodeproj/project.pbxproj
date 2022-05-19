@@ -66,17 +66,33 @@
 			children = (
 				43F0B9C628365D97009B6F09 /* AppDelegate.swift */,
 				43F0B9C828365D97009B6F09 /* SceneDelegate.swift */,
-				43F0B9DA28366290009B6F09 /* MobileNetV2.mlmodel */,
-				43F0B9E0283697C0009B6F09 /* YOLOv3.mlmodel */,
-				43F0B9CA28365D97009B6F09 /* ViewController.swift */,
-				43F0B9DC28368C79009B6F09 /* PageViewController.swift */,
+				43F0B9E22836AFCD009B6F09 /* coreMLModels */,
+				43F0B9E32836AFE6009B6F09 /* ViewControllers */,
 				43F0B9CC28365D97009B6F09 /* Main.storyboard */,
-				43F0B9DE283694B3009B6F09 /* YoloViewController.swift */,
 				43F0B9CF28365D98009B6F09 /* Assets.xcassets */,
 				43F0B9D128365D98009B6F09 /* LaunchScreen.storyboard */,
 				43F0B9D428365D98009B6F09 /* Info.plist */,
 			);
 			path = CoreMLObjectRecognition;
+			sourceTree = "<group>";
+		};
+		43F0B9E22836AFCD009B6F09 /* coreMLModels */ = {
+			isa = PBXGroup;
+			children = (
+				43F0B9DA28366290009B6F09 /* MobileNetV2.mlmodel */,
+				43F0B9E0283697C0009B6F09 /* YOLOv3.mlmodel */,
+			);
+			path = coreMLModels;
+			sourceTree = "<group>";
+		};
+		43F0B9E32836AFE6009B6F09 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				43F0B9DC28368C79009B6F09 /* PageViewController.swift */,
+				43F0B9CA28365D97009B6F09 /* ViewController.swift */,
+				43F0B9DE283694B3009B6F09 /* YoloViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
