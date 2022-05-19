@@ -88,6 +88,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             // Get results as VNClassificationObservation array
             guard let results = request.results as? [VNClassificationObservation] else { return }
             
+            // top 5 results
+            var displayText = ""
+            for result in results.prefix(5) {
+                displayText += "\(Int(result.confidence * 100))%" + result.identifier + "\n"
+            }
         }
     }
 }
