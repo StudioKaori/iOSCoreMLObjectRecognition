@@ -38,6 +38,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         if session.canAddInput(input) { // if the input can be addable, add the input to the session
             session.addInput(input)
         }
+        
+        // Output settings
+        let output = AVCaptureVideoDataOutput()
+        output.setSampleBufferDelegate(self, queue: DispatchQueue(label: "VideoQueue")) // set delegate to receive the data every frame
+        if session.canAddOutput(output) {
+            session.addOutput(output)
+        }
     }
 }
 
