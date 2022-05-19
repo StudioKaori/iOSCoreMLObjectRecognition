@@ -55,5 +55,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         // Start
         session.startRunning()
     }
+    
+    func setModel() {
+        
+        // create instance, model property
+        mlModel = try? VNCoreMLModel(for: MobileNetV2().model)
+    }
 }
 
