@@ -55,5 +55,11 @@ extension PageViewController: UIPageViewControllerDataSource {
         return nil
     }
     
-    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        if let index = controllers.firstIndex(of: viewController),
+           index > 0 {
+            return controllers[index - 1]
+        }
+        return nil
+    }
 }
