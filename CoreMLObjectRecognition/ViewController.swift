@@ -24,6 +24,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         
         // Initial setting for video
         setVideo()
+        setModel()
     }
 
     func setVideo() {
