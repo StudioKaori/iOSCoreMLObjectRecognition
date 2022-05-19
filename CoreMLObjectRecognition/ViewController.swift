@@ -62,5 +62,10 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         // create instance, model property
         mlModel = try? VNCoreMLModel(for: MobileNetV2().model)
     }
+    
+    // caputureOutput will be called for each frame was written
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        <#code#>
+    }
 }
 
