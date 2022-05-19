@@ -32,6 +32,12 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         let session = AVCaptureSession() // AVCaptureSettion: managing video session
         session.sessionPreset = AVCaptureSession.Preset.photo // Quality of the image
         
+        // video input settings
+        let device = AVCaptureDevice.default(for: .video) // get device
+        guard let input = try? AVCaptureDeviceInput(device: device!) else { return } // create input by using device
+        if session.canAddInput(input) { // if the input can be addable, add the input to the session
+            session.addInput(input)
+        }
     }
 }
 
