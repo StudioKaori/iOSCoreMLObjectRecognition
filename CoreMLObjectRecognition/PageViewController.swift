@@ -27,5 +27,23 @@ class PageViewController: UIPageViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func setupPageViewController() {
+        
+        let mobileNetVC = storyboard?.instantiateViewController(withIdentifier: "MobileNetVC") as! UIViewController
+        
+        let yoloVC = storyboard?.instantiateViewController(withIdentifier: "YoloVC") as! UIViewController
+        
+        controllers = [mobileNetVC,yoloVC]
+        setViewControllers([controllers[0]], direction: .forward, animated: true, completion: nil)
+        self.dataSource = self
+    }
 
+}
+
+extension PageViewController: UIPageViewControllerDataSource {
+    
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return controllers.count
+    }
 }
