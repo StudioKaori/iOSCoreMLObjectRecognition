@@ -21,9 +21,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Initial setting for video
+        setVideo()
     }
 
-
+    func setVideo() {
+        
+        // Session settings
+        let session = AVCaptureSession() // AVCaptureSettion: managing video session
+        session.sessionPreset = AVCaptureSession.Preset.photo // Quality of the image
+        
+    }
 }
 
