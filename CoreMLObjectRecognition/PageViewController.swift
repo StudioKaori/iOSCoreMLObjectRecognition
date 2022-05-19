@@ -13,8 +13,9 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("page view controller!!!!")
         setupPageViewController()
+
     }
     
 
@@ -30,9 +31,9 @@ class PageViewController: UIPageViewController {
     
     private func setupPageViewController() {
         
-        let mobileNetVC = storyboard?.instantiateViewController(withIdentifier: "MobileNetVC") as! UIViewController
+        let mobileNetVC = storyboard?.instantiateViewController(withIdentifier: "MobileNetVC") as! ViewController
         
-        let yoloVC = storyboard?.instantiateViewController(withIdentifier: "YoloVC") as! UIViewController
+        let yoloVC = storyboard?.instantiateViewController(withIdentifier: "YoloVC") as! YoloViewController
         
         controllers = [mobileNetVC,yoloVC]
         
