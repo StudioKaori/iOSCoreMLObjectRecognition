@@ -93,6 +93,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
             for result in results.prefix(5) {
                 displayText += "\(Int(result.confidence * 100))%" + result.identifier + "\n"
             }
+            
+            // Execute it in the main thread
+            DispatchQueue.main.async {
+                self.textView.text = displayText
+            }
         }
     }
 }
