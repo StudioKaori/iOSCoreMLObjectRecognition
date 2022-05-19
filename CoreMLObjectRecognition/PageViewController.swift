@@ -35,6 +35,8 @@ class PageViewController: UIPageViewController {
         let yoloVC = storyboard?.instantiateViewController(withIdentifier: "YoloVC") as! UIViewController
         
         controllers = [mobileNetVC,yoloVC]
+        
+        // set initial screen
         setViewControllers([controllers[0]], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
     }
@@ -43,10 +45,12 @@ class PageViewController: UIPageViewController {
 
 extension PageViewController: UIPageViewControllerDataSource {
     
+    // return pages count
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return controllers.count
     }
     
+    // swipe for left
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if let index = controllers.firstIndex(of: viewController),
            index < controllers.count - 1 {
@@ -55,6 +59,7 @@ extension PageViewController: UIPageViewControllerDataSource {
         return nil
     }
     
+    // swipe for right
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         if let index = controllers.firstIndex(of: viewController),
            index > 0 {
