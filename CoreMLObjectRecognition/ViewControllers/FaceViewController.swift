@@ -6,9 +6,17 @@
 //
 
 import UIKit
+import AVFoundation // video input output framework
+import Vision // Vision import
 
-class FaceViewController: UIViewController {
+class FaceViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
+    var recognitionInterval = 0 //Interval for object recognition
+    
+    var mlModel: VNCoreMLModel? // CoreML model
+    
+    @IBOutlet var textView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
