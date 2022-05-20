@@ -1,31 +1,20 @@
 //
-//  YoloViewController.swift
+//  FaceViewController.swift
 //  CoreMLObjectRecognition
 //
-//  Created by Kaori Persson on 2022-05-19.
+//  Created by Kaori Persson on 2022-05-20.
 //
 
 import UIKit
-import AVFoundation
-import Vision
 
-class YoloViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
-    
-    var recognitionInterval = 0
-    
-    var mlModel: VNCoreMLModel?
+class FaceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        // Do any additional setup after loading the view.
     }
     
-    func setVideo() {
- 
-        
-        
-    }
 
     /*
     // MARK: - Navigation

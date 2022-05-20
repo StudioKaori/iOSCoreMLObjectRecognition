@@ -33,9 +33,9 @@ class PageViewController: UIPageViewController {
         
         let mobileNetVC = storyboard?.instantiateViewController(withIdentifier: "MobileNetVC") as! ViewController
         
-        let yoloVC = storyboard?.instantiateViewController(withIdentifier: "YoloVC") as! YoloViewController
+        let faceVC = storyboard?.instantiateViewController(withIdentifier: "FaceVC") as! FaceViewController
         
-        controllers = [mobileNetVC,yoloVC]
+        controllers = [mobileNetVC,faceVC]
         
         // set initial screen
         setViewControllers([controllers[0]], direction: .forward, animated: true, completion: nil)
