@@ -38,7 +38,7 @@ class PageViewController: UIPageViewController {
         controllers = [mobileNetVC,faceVC]
         
         // set initial screen
-        setViewControllers([controllers[0]], direction: .forward, animated: true, completion: nil)
+        setViewControllers([controllers[1]], direction: .forward, animated: true, completion: nil)
         self.dataSource = self
     }
 
